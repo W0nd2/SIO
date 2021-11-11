@@ -1,0 +1,42 @@
+body{
+  background-color: #fff;
+  color:black;
+  font-family: sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.Buttonget__Audit{
+  margin-left: 43%;
+}
+
+.Buttonget__Audit-but{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  background-color: transparent;
+  border:none;
+}
+
+.Auditria{
+  
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Auditria__name{
+  text-align: center;
+}
+
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}

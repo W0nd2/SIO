@@ -1,0 +1,78 @@
+.Body__LoginForm{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginForm{
+    width: 300px;
+    padding: 32px;
+    border-radius: 15px;
+    box-shadow: 0 4px 16px #ccc;
+}
+.LoginForm__title{
+    text-align: center;
+    margin-bottom: 32px;
+    font-weight: normal;
+}
+.LoginForm__input,
+.LoginForm__button{
+    font-family: sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 15px;
+}
+
+.LoginForm__input{
+    position:relative;
+    margin-bottom: 32px;
+}
+
+.LoginForm__input_label{
+    position: absolute;
+    top:0;
+    z-index: -1;
+    color:grey;
+    transition: 0.3s;
+}
+
+.LoginForm__input_user{
+    width: 100%;
+    padding-bottom: 10px;
+    border:none;
+    border-bottom: 1px solid gray;
+    background-color:transparent;
+    outline: none;
+    transition: 0.3s;
+}
+
+.LoginForm__input_user:focus{
+    border-bottom: 1px solid #1a73a8;
+}
+.Login__button_flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.LoginForm__button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0071f0;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 0 15px;
+}
+
+.LoginForm__button:focus,
+.LoginForm__button:hover{
+    background-color: rgba(0, 113, 240, 0.7);
+}
+
+.LoginForm__input_user:focus ~ .LoginForm__input_label,
+.LoginForm__input_user:not(:placeholder-shown) ~ .LoginForm__input_label {
+    top: -18px;
+    font-size: 12px;
+    color:#e0e0e0;
+}

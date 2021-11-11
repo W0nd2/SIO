@@ -1,0 +1,47 @@
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    border: 1.5px solid black;
+    border-radius:0 0 10px 10px;
+}
+
+.activated{
+    background-color: #4FACF7;
+}
+
+.not-activated{
+    background-color: #e71a1a;
+}
+
+.Header_logo{
+    width: 50px;
+    margin-left: 10px;
+}
+
+.Header_name{
+    letter-spacing: 0.43rem;
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: none;
+    color:rgb(7, 7, 7);
+}
+
+.Header_round{
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header_user{
+    font-size: 20px;
+    
+}
