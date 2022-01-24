@@ -18,7 +18,7 @@ class UserService{
         }
         const hashPassword = await bcrypt.hash(password, 3);
         const activationLink = uuid.v4();
-        const role = await Role.findOne({value: 'Admin'}); 
+        const role = await Role.findOne({value: 'User'}); 
         const user = await UserModel.create({email, password:hashPassword, activationLink, roles: role.value})
         await mailService.sendActivationMail(email, `${process.env.API_URL}/api/activate/${activationLink}`);
 

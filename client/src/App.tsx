@@ -21,29 +21,12 @@ const App: FC = () => {
 
 
     useEffect(() => {
-        if (localStorage.getItem('token')) {
-            store.checkAuth()
-            getAuditorii()
-        }
-    }, [])
-
-    async function getUsers() {
-        try {
-            if (users.length === 0) {
-                const response = await UserService.fetchUsers();
-                console.log(response.data);
-                setUsers(response.data);
-            }
-            else {
-                setUsers([]);
-            }
-        } catch (e) {
-            console.log(e);
-        }
-    }
+        getAuditorii();
+    }, [store.isAuth])
 
     async function getAuditorii() {
         try {
+            await store.checkAuth()
             if (auditorii.length === 0) {
                 const response = await UserService.fetchAuditorii();
                 console.log(response.data);
@@ -84,6 +67,7 @@ const App: FC = () => {
                 {/* <div className="Buttonget__Audit">
                     <button className="Buttonget__Audit-but" onClick={getAuditorii}>Получить аудитории</button>
                 </div> */}
+                
                 {
                     auditorii.map(auditoria =>
                         <div className="Auditria">
